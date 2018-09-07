@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style>
+			body {text-align:center;background-color: #000000;color: #00ff00;}
+			footer {left: 0;bottom: 0;width: 100%;background-color: #000000;color: #00ff00;border-top: 1px dashed #006900;}
+			button {background-color: #000000;color: #00FF00;padding: 10px;border-radius: 10px;}
+			a:link {color: #00ff00;text-decoration:underline;}
+			a:visited {color: #00ff00;text-decoration:underline;}
+			a:hover {color: #00bf00;text-decoration:underline;}
+			a:active {color: #008900;text-decoration:underline;}
+			h1 {color: #00be00;}
+			h2 {color: #00ff00;}
+			h3 {color: #00ff00;}
+			h6 {color: #00ff00;}
+			table {border: 5px solid #006900;margin-left:auto;margin-right:auto;}
+			th {padding: 10px;border: 0;text-align:center}
+			hr {border-top: 1px dashed #006900;border-bottom: 0;border-left: 0;border-right: 0;}
+			mark {background-color: #006900;color: #fff;}
+			div {display: inline-block;}
+			/*coustom scrollbar*/
+			/* width */
+			::-webkit-scrollbar {
+				width: 10px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+				background: transparent; 
+			}
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background: #0f0; 
+				border-radius: 10px;
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #009900; 
+			}
+
+			/*corner where the scrollbars meet*/
+			::-webkit-scrollbar-corner {
+				background: transparent;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>Oculus VR Service Toggle</title>
+		<meta name="Oculus VR Service Toggle" content="Oculus VR Service Toggle">
+	</head>
+	<body>
+		<img src='ovrtoggle.ico'>
+		<h1 id='top'>Oculus VR Service Toggle</h1>
+		<hr />
+		<div id='readme' style="max-width:100%;height:100px;width:550px;border: 0;margin: auto;">
+			<p>These files let you start and stop the Oculus VR service.<br>The batch file checks to make sure you're running as an admin before showing you the state of the service and confirming you want to start or stop it.<br>The executable does exactally the same thing as the batch file, but can be pinned to the taskbar or start menu for easy access.</p>
+		</div>
+		<hr style="height:10px; visibility:hidden;" />
+		<div id='exe' style="max-width:50%;height:100px;width:300px;border: 0;margin: auto;">
+			<a href='ovrtoggle.exe' style='text-decoration: none;'><button>Download .exe</button></a>
+			<!--&nbsp;&nbsp;<a href='https://www.thewindowsclub.com/download-failed-virus-detected-message-windows-10' style="text-decoration: none;" target="_blank"><small>Having trouble?</small></a>-->
+		</div>
+		<div id='bat' style="max-width:50%;height:100px;width:300px;border: 0;margin: auto;">
+			<a href='ovrtoggle.bat' style='text-decoration: none;'><button>Download .bat</button></a>
+		</div>
+		<hr style="height:1px; visibility:hidden;" />
+		<div style="max-width:100%;height:100px;width:550px;border: 0;margin: auto;">
+			<h4>You can use the download buttons above or copy/paste the contents below into notepad and save as a .bat</h4>
+		</div>
+		<br>
+		<div id='rawfile' style="max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;">
+			<pre id="thePre" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:100%;border: 0;"></pre>
+		</div>
+		<hr style="height:1px; visibility:hidden;" />
+	</body>
+	<footer>
+		<div style="max-width:33%;height: auto;width: auto;border: 0;margin: auto; float: left; padding-top: 10px">
+			<a href="/"><button>Home</button></a>
+		</div>
+		<div style="max-width:33%;height: auto;width: auto;border: 0;margin: auto;">
+			This is <a href='https://raw.githubusercontent.com/LunarTiger/ovrtoggle/master/LICENSE' target="_blank">open source</a>!! If you want to contribute, you can.<br>
+			<a href='https://github.com/LunarTiger/ovrtoggle/archive/master.zip'>Download a ZIP</a>, or use <mark>https://github.com/LunarTiger/ovrtoggle.git</mark> to clone the repo.
+		</div>
+		<div style="max-width:33%;height: auto;width: auto;border: 0;margin: auto; float: right; padding-top: 10px">
+			<a href="/projects"><button>My Projects</button></a>
+		</div>
+	</footer>
+	<script>
+		fetch('https://lunartiger.github.io/ovrtoggle/ovrtoggle.bat')
+		.then(body=>body.text())
+		.then(body=>{
+			document.getElementById('thePre').innerText = body;
+		})
+	</script>
+</html>
