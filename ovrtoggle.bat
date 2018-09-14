@@ -10,9 +10,11 @@ echo --------------------------
 ) else (
 color 0c
 echo Failure: Current permissions inadequate, please run as administrator.
-goto :end
+pause >nul
+exit
 )
 
+:start
 sc config OVRService start= demand >nul
 sc query "OVRService" | find "RUNNING" >nul
 if %errorlevel% == 1 goto :startq
@@ -52,9 +54,18 @@ goto :end
 :error
 color 0c
 echo Error: Unable to verify if the Oculus VR Service is running.
-goto :end
-
-:end
-echo Press any key to exit.
 pause >nul
 exit
+
+:end
+echo Re-Run?
+echo   [1 = Yes] [2 = No]
+set /P c=
+
+if /I "%c%" EQU "1" (
+cls
+goto :start
+)
+if /I "%c%" EQU "2" exit
+cls
+goto :end
