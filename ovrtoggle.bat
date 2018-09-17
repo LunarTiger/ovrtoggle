@@ -41,7 +41,7 @@ if /I "%c%" EQU "1" (
 net stop "OVRService"
 goto :end
 )
-if /I "%c%" EQU "2"(
+if /I "%c%" EQU "2" (
 net stop "OVRService"
 net start "OVRService"
 goto :end
