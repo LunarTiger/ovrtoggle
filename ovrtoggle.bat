@@ -50,9 +50,6 @@ if /I "%c%" EQU "3" exit
 cls
 goto :stopq
 
-:toggle
-
-
 :error
 color 0c
 echo Error: Unable to verify if the Oculus VR Service is running.
