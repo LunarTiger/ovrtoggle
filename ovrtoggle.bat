@@ -1,12 +1,9 @@
 @echo off
 title Oculus VR Service Toggle
-color 02
 
-echo Administrative permissions required. Detecting permissions...
 net session >nul 2>&1
 if %errorlevel% == 0 (
-echo Success: Administrative permissions confirmed.
-cls
+color 02
 ) else (
 color 0c
 echo Failure: Current permissions inadequate, please run as administrator.
@@ -14,7 +11,6 @@ pause >nul
 exit
 )
 
-:start
 sc config OVRService start= demand >nul
 sc query "OVRService" | find "RUNNING" >nul
 if %errorlevel% == 1 goto :startq
@@ -23,8 +19,8 @@ goto :error
 
 :startq
 echo The Oculus VR Service is not running.
-echo Do you wish to start the Oculus VR Service?
-echo                                 [1 = Yes, start service] [2 = No, keep service stopped]
+echo Do you wish to start or toggle the Oculus VR Service?
+echo                  [1 = Start Service] [2 = Do Nothing]
 set /P c=
 
 if /I "%c%" EQU "1" (
@@ -38,16 +34,24 @@ goto :startq
 :stopq
 echo The Oculus VR Service is running.
 echo Do you wish to stop the Oculus VR Service?
-echo                                 [1 = Yes, stop service] [2 = No, keep service running]
+echo   [1 = Stop Service] [2 = Toggle Service] [3 = Do Nothing]
 set /P c=
 
 if /I "%c%" EQU "1" (
 net stop "OVRService"
 goto :end
 )
-if /I "%c%" EQU "2" exit
+if /I "%c%" EQU "2"(
+net stop "OVRService"
+net start "OVRService"
+goto :end
+)
+if /I "%c%" EQU "3" exit
 cls
 goto :stopq
+
+:toggle
+
 
 :error
 color 0c
@@ -56,14 +60,6 @@ pause >nul
 exit
 
 :end
-echo Re-Run?
-echo   [1 = Yes] [2 = No]
-set /P c=
-
-if /I "%c%" EQU "1" (
-cls
-goto :start
-)
-if /I "%c%" EQU "2" exit
-cls
-goto :end
+echo Press any key to exit.
+pause >nul
+exit
