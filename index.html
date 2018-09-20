@@ -89,7 +89,7 @@
 		</div>
 	</footer>
 	<script>
-		fetch('https://lunartiger.github.io/ovrtoggle/ovrtoggle.bat')
+		fetch('https://lunartiger.github.io/ovrtoggle/ovrtoggle.bat?'+(new Date().getTime());)
 		.then(body=>body.text())
 		.then(body=>{
 			document.getElementById('thePre').innerText = body;
