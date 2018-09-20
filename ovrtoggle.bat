@@ -19,7 +19,7 @@ goto :error
 
 :startq
 echo The Oculus VR Service is not running.
-echo Do you wish to start or toggle the Oculus VR Service?
+echo Do you wish to start the Oculus VR Service?
 echo                  [1 = Start Service] [2 = Do Nothing]
 set /P c=
 
@@ -33,7 +33,7 @@ goto :startq
 
 :stopq
 echo The Oculus VR Service is running.
-echo Do you wish to stop the Oculus VR Service?
+echo Do you wish to stop or toggle the Oculus VR Service?
 echo   [1 = Stop Service] [2 = Toggle Service] [3 = Do Nothing]
 set /P c=
 
