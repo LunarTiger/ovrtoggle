@@ -34,19 +34,19 @@ goto :startq
 :stopq
 echo The Oculus VR Service is running.
 echo Do you wish to stop or toggle the Oculus VR Service?
-echo   [1 = Stop Service] [2 = Toggle Service] [3 = Do Nothing]
+echo   [1 = Stop Service] [2 = Do Nothing] [3 = Toggle Service]
 set /P c=
 
 if /I "%c%" EQU "1" (
 net stop "OVRService"
 goto :end
 )
-if /I "%c%" EQU "2" (
+if /I "%c%" EQU "2" exit
+if /I "%c%" EQU "3" (
 net stop "OVRService"
 net start "OVRService"
 goto :end
 )
-if /I "%c%" EQU "3" exit
 cls
 goto :stopq
 
@@ -57,6 +57,4 @@ pause >nul
 exit
 
 :end
-echo Press any key to exit.
-pause >nul
 exit
