@@ -13,7 +13,7 @@
 	<h4>You can use the download buttons above or copy/paste the contents below into notepad and save as a .bat</h4>
 </div>
 <br>
-<div id='rawfile' style="max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;display: inline-block;">
+<div id='rawfile' style="max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;">
 	<pre id="thePre" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:100%;border: 0;"></pre>
 </div>
 <hr style="height:1px; visibility:hidden;" />
