@@ -18,7 +18,7 @@
 </div>
 <hr style="height:1px; visibility:hidden;" />
 <footer>
-	<div style="max-width:33%;height: auto;width: auto;border: 0;margin: auto;display: inline-block;">
+	<div style="max-width:95%;height: auto;width: auto;border: 0;margin: auto;display: inline-block;">
 		This is <a href='https://raw.githubusercontent.com/LunarTiger/ovrtoggle/master/LICENSE' target="_blank">open source</a>!! If you want to contribute, you can.<br>
 		<a href='https://github.com/LunarTiger/ovrtoggle/archive/master.zip'>Download a ZIP</a>, or use <mark>https://github.com/LunarTiger/ovrtoggle.git</mark> to clone the repo.
 	</div>
