@@ -13,9 +13,7 @@
 	<h4>You can use the download buttons above or copy/paste the contents below into notepad and save as a .bat</h4>
 </div>
 <br>
-<div id='rawfile' style="max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;">
-	<pre id="thePre" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:100%;border: 0;"></pre>
-</div>
+<pre id="rawfile" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;"></pre>
 <hr style="height:1px; visibility:hidden;" />
 <footer>
 	<div style="max-width:95%;height: auto;width: auto;border: 0;margin: auto;display: inline-block;">
@@ -27,6 +25,6 @@
 	fetch('https://lunartiger.github.io/ovrtoggle/ovrtoggle.bat')
 	.then(body=>body.text())
 	.then(body=>{
-		document.getElementById('thePre').innerText = body;
+		document.getElementById('rawfile').innerText = body;
 	})
 </script>
