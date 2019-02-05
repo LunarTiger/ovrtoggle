@@ -9,11 +9,10 @@
 	<a href='ovrtoggle.bat' style='text-decoration: none;'><button>Download .bat</button></a>
 </div>
 <hr style="height:1px; visibility:hidden;" />
-<div style="max-width:100%;height:100px;width:550px;border: 0;margin: auto;display: inline-block;">
-	<h4>You can use the download buttons above or copy/paste the contents below into notepad and save as a .bat</h4>
+<button class="collapsible" id="source" data-parent="source" data-child="source-child">View Source</button>
+<div id="source-child" class="innertext" data-parent="source">
+	<pre id="rawfile" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;"></pre>
 </div>
-<br>
-<pre id="rawfile" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;"></pre>
 <hr style="height:1px; visibility:hidden;" />
 <footer>
 	<div style="max-width:95%;height: auto;width: auto;border: 0;margin: auto;display: inline-block;">
@@ -22,9 +21,7 @@
 	</div>
 </footer>
 <script>
-	fetch('https://lunartiger.github.io/ovrtoggle/ovrtoggle.bat')
-	.then(body=>body.text())
-	.then(body=>{
-		document.getElementById('rawfile').innerText = body;
-	})
+fetch('https://lunartiger.github.io/ovrtoggle/ovrtoggle.bat')
+.then(body=>body.text())
+.then(body=>{document.getElementById('rawfile').innerText = body;})
 </script>
