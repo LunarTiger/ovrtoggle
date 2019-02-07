@@ -200,12 +200,14 @@ li.navbar a:hover {
     background: transparent;
 }
 
+/* collapsible layout */
+
 .collapsible {
     background-color: #006900;
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 75%;
+    width: 100%;
     border: none;
     text-align: left;
     outline: none;
@@ -229,19 +231,31 @@ li.navbar a:hover {
 }
 
 .innertext {
-    padding: 0 15%;
+    padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #000;
+    background-color: #020;
     text-align: left;
+    border-radius: 10px;
+    margin-bottom: 1.5em;
 }
 
-.innertextcenter {
-    padding: 0 15%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #000;
+.innertext p {
+    margin: 20px 0 20px
+}
+
+.center {
     text-align: center;
 }
+
+.encase {
+    border-width: 0;
+    width: 75%;
+    height:auto;
+    max-width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*------------------------------------*/

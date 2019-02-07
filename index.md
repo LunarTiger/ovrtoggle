@@ -9,9 +9,11 @@
 	<a href='ovrtoggle.bat' style='text-decoration: none;'><button>Download .bat</button></a>
 </div>
 <hr style="height:1px; visibility:hidden;" />
-<button class="collapsible" id="source" data-parent="source" data-child="source-child">View Source</button>
-<div id="source-child" class="innertext" data-parent="source">
-	<pre id="rawfile" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;"></pre>
+<div class="encase">
+	<button class="collapsible" id="source" data-parent="source" data-child="source-child">View Source</button>
+	<div id="source-child" class="innertext center" data-parent="source">
+		<pre id="rawfile" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;"></pre>
+	</div>
 </div>
 <hr style="height:1px; visibility:hidden;" />
 <footer>
