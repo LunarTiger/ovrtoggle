@@ -12,7 +12,7 @@
 <div class="encase">
 	<button class="collapsible" id="source" data-parent="source" data-child="source-child">View Source</button>
 	<div id="source-child" class="innertext center" data-parent="source">
-		<pre id="rawfile" style="text-align:left; background:transparent; color: green;max-width:100%;max-height:95%;height:900px;width:705px;border: 4px solid #006900;margin: auto;"></pre>
+		<p><pre id="rawfile" style="text-align:left; background:#000; color: green;height:auto;width:100%;border: 4px solid #006900;margin: auto;"></pre></p>
 	</div>
 </div>
 <hr style="height:1px; visibility:hidden;" />
