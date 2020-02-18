@@ -1,5 +1,5 @@
 <div id='readme' style="max-width:100%;height:100px;width:550px;border: 0;margin: auto;display: inline-block;">
-	<p>These files let you start and stop the Oculus VR service.<br>The batch file checks to make sure you're running as an admin before showing you the state of the service and confirming you want to start or stop it.<br>The executable does exactally the same thing as the batch file, but can be pinned to the taskbar or start menu for easy access.</p>
+	<p>These files let you start and stop the Oculus VR service.<br>The batch file checks to make sure you're running as an admin before showing you the state of the service and confirming you want to start or stop it.<br>The executable does exactly the same thing as the batch file, but can be pinned to the taskbar or start menu for easy access.</p>
 </div>
 <hr style="height:10px; visibility:hidden;" />
 <div id='exe' style="max-width:50%;height:100px;width:300px;border: 0;margin: auto;display: inline-block;">
